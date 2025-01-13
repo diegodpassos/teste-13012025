@@ -1,13 +1,31 @@
 def calculadora(consumo: list, tarifa: float, classe: str) -> tuple:
     """
-    retorna uma tupla de floats contendo economia anual, economia mensal, desconto aplicado e cobertura.
+    Retorna uma tupla de floats contendo economia anual, economia mensal, desconto aplicado e cobertura.
     """
-    economia_anual = 0
-    economia_mensal = 0
-    desconto_aplicado = 0
-    cobertura = 0
+    # Calcular o consumo médio
+    consumo_medio = sum(consumo) / len(consumo)
+    
+    # Determinar desconto e cobertura com base no consumo médio e tipo de tarifa
+    if consumo_medio < 10000:
+        descontos = {"Residencial": 0.18, "Comercial": 0.16, "Industrial": 0.12}
+        cobertura = 0.90
+    elif 10000 <= consumo_medio <= 20000:
+        descontos = {"Residencial": 0.22, "Comercial": 0.18, "Industrial": 0.15}
+        cobertura = 0.95
+    else:
+        descontos = {"Residencial": 0.25, "Comercial": 0.22, "Industrial": 0.18}
+        cobertura = 0.99
 
-    # Desenvolva seu código aqui #
+    # Verificar se a classe de tarifa é válida
+    if classe not in descontos:
+        raise ValueError("Classe de tarifa inválida. Deve ser 'Residencial', 'Comercial' ou 'Industrial'.")
+
+    # Calcular o desconto aplicado
+    desconto_aplicado = descontos[classe]
+
+    # Calcular economia mensal e anual
+    economia_mensal = consumo_medio * tarifa * desconto_aplicado * cobertura
+    economia_anual = economia_mensal * 12
 
     return (
         round(economia_anual, 2),
@@ -84,4 +102,3 @@ if __name__ == "__main__":
     )  # BANDEIRA VERDE
 
     print("Todos os testes passaram!")
-    

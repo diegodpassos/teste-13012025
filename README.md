@@ -52,3 +52,40 @@ Portanto, desenvolva um código de web scraping que obtenha a tarifa diretamente
 5. Inclua neste mesmo README uma seção detalhada que explique claramente os passos necessários para executar o código. Certifique-se de que as instruções sejam precisas, organizadas e fáceis de entender, pois os avaliadores seguirão essa documentação;
 6. A entrega deve ser realizada dentro do prazo estabelecido;
 7. O candidato deve fazer um fork do repositório. A entrega pode ser realizada por meio de um pull request para o repositório original (o que será considerado um diferencial) ou enviando o link do seu repositório para o e-mail lucas@dg.energy.
+
+<h2 id="Documentação" style="text-align:center;border-bottom:none">Documentação: Como Rodar a Aplicação</h2>
+
+### Requisitos
+
+Certifique-se de que você tenha os seguintes itens instalados no seu ambiente:
+
+Python 3.8+
+Bibliotecas necessárias: requests, beautifulsoup4
+
+### Passo a Passo
+
+### 1. Clonar ou baixar o código
+
+Baixe ou clone o repositório onde o código está armazenado.
+
+### 2. Instalar as dependências
+No terminal, na pasta onde os arquivos estão localizados, instale as bibliotecas necessárias executando:
+
+pip install requests beautifulsoup4
+
+### 3. Executar o código de testes
+Abra o arquivo Python que contém a lógica de cálculo (exemplo: calculadora_desafio1.py).
+Execute o script para verificar se os testes passam corretamente:
+
+python calculadora_desafio1.py
+ou
+python calculadora_desafio2.py
+
+Depende de qual desafio você quer verificar a avaliação e o código.
+
+Se tudo estiver configurado corretamente, você verá a mensagem
+
+Todos os testes passaram!
+
+
+
